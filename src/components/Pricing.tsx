@@ -19,7 +19,7 @@ export default function Pricing() {
       </div>
       
       <div className="max-w-lg mx-auto">
-        <div className="bg-gradient-to-b from-white to-primary-50 rounded-none p-10 shadow-2xl relative overflow-hidden group">
+        <div className="bg-gradient-to-b from-white to-primary-50 rounded-none p-10 shadow-2xl relative overflow-hidden group border border-neutral-200">
           {/* Premium badge */}
           <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
             <span className="bg-accent-500 text-dark-900 px-6 py-2 rounded-full text-sm font-bold tracking-wide shadow-lg">
@@ -59,9 +59,9 @@ export default function Pricing() {
             ))}
           </ul>
           
-          <div className="relative z-10">
+          <div className="relative z-20">
             <a href="https://tejpics.gumroad.com/l/lwchdo?wanted=true" target="_blank" rel="noopener noreferrer" className="block w-full">
-              <Button className="w-full mb-4" size="lg">
+              <Button className="w-full mb-4 relative z-30" size="lg">
                 Buy on Gumroad
               </Button>
             </a>
