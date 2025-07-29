@@ -36,9 +36,9 @@ export default function Hero() {
                   Buy Now - $25
                 </Button>
               </a>
-              <a href="#features">
+              <a href="https://www.youtube.com/watch?v=Q14wbLIVBSE&ab_channel=Tejmatic" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                  View Features
+                  Watch Demo
                 </Button>
               </a>
             </div>

@@ -21,7 +21,7 @@ const features = [
   },
   {
     title: 'Pay Once, Use Forever',
-    description: 'Stop bleeding money on subscriptions! $49 once vs $204/year elsewhere. Process unlimited audio at OpenAI rates (~$0.006/minute).',
+    description: 'Stop bleeding money on subscriptions! $25 once vs $204/year elsewhere. Process unlimited audio at OpenAI rates (~$0.006/minute).',
     screenshot: '💰',
     accent: 'primary-500'
   },
@@ -168,14 +168,14 @@ export default function Features() {
                         {index === 3 && (
                           // Pay Once, Use Forever
                           <div className="text-center space-y-3">
-                            <div className="text-2xl font-bold text-gray-900">$49</div>
+                            <div className="text-2xl font-bold text-gray-900">$25</div>
                             <div className="text-xs text-gray-600">One-time purchase</div>
                             <div className="space-y-1">
                               <div className="text-xs text-gray-700">vs Competitors:</div>
                               <div className="text-xs text-red-600">Otter.ai: $204/year</div>
                               <div className="text-xs text-red-600">Rev.ai: $144/year</div>
                             </div>
-                            <div className="text-xs font-medium text-green-600">Save $155+ annually</div>
+                            <div className="text-xs font-medium text-green-600">Save $179+ annually</div>
                           </div>
                         )}
                         

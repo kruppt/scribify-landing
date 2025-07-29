@@ -13,8 +13,8 @@ const steps = [
   },
   {
     step: '3',
-    title: 'Start Writing',
-    description: 'Open Scribify and start taking notes immediately. No setup required.'
+    title: 'Start Summarizing',
+    description: 'Open Scribify and start transcribing audio immediately. No setup required.'
   }
 ]
 
@@ -26,7 +26,7 @@ export default function EasySetup() {
           Get Started in Seconds
         </h2>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          No complicated setup, no account creation, no learning curve. Just download and start writing.
+          No complicated setup, no account creation, no learning curve. Just download and start summarizing.
         </p>
       </div>
       
