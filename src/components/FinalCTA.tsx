@@ -41,13 +41,15 @@ export default function FinalCTA() {
                   Buy Now - $25
                 </Button>
               </a>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="w-full sm:w-auto border-accent-400 text-accent-400 hover:bg-accent-400 hover:text-dark-900"
-              >
-                Watch Demo
-              </Button>
+              <a href="#features">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="w-full sm:w-auto border-accent-400 text-accent-400 hover:bg-accent-400 hover:text-dark-900"
+                >
+                  View Features
+                </Button>
+              </a>
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto">

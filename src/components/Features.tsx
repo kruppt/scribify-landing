@@ -214,7 +214,7 @@ export default function Features() {
                                 <span className="text-blue-600">⚡ Processing</span>
                               </div>
                             </div>
-                            <div className="text-xs text-gray-500">< 3 minutes average</div>
+                            <div className="text-xs text-gray-500">&lt; 3 minutes average</div>
                           </div>
                         )}
                         

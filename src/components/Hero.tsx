@@ -26,7 +26,7 @@ export default function Hero() {
             </h1>
             
             <p className="text-fluid-lg text-dark-700 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Transform your audio recordings into beautifully organized transcripts and summaries with Scribify. 
+              Transform your audio files into beautifully organized transcripts and summaries with Scribify. 
               Advanced AI transcription technology designed exclusively for Mac users.
             </p>
             
@@ -36,9 +36,11 @@ export default function Hero() {
                   Buy Now - $25
                 </Button>
               </a>
-              <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                Watch Demo
-              </Button>
+              <a href="#features">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                  View Features
+                </Button>
+              </a>
             </div>
             
             <div className="flex items-center justify-center lg:justify-start gap-8 text-sm text-dark-600">

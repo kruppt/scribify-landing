@@ -8,18 +8,18 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Scribify - Effortless Audio Transcription for Mac',
-  description: 'Transform your audio recordings into organized transcripts and summaries with Scribify. Advanced AI transcription technology designed for Mac users.',
+  description: 'Transform your audio files into organized transcripts and summaries with Scribify. Advanced AI transcription technology designed for Mac users.',
   keywords: 'transcription, audio transcription, mac app, ai transcription, speech to text, audio to text',
   authors: [{ name: 'Scribify Team' }],
   openGraph: {
     title: 'Scribify - Effortless Audio Transcription for Mac',
-    description: 'Transform your audio recordings into organized transcripts and summaries with Scribify. Advanced AI transcription technology designed for Mac users.',
+    description: 'Transform your audio files into organized transcripts and summaries with Scribify. Advanced AI transcription technology designed for Mac users.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Scribify - Effortless Audio Transcription for Mac',
-    description: 'Transform your audio recordings into organized transcripts and summaries with Scribify. Advanced AI transcription technology designed for Mac users.',
+    description: 'Transform your audio files into organized transcripts and summaries with Scribify. Advanced AI transcription technology designed for Mac users.',
   },
 }
 
