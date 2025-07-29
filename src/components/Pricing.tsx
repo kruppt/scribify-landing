@@ -19,7 +19,7 @@ export default function Pricing() {
       </div>
       
       <div className="max-w-lg mx-auto">
-        <div className="bg-gradient-to-b from-white to-primary-50 rounded-none p-10 shadow-2xl relative overflow-hidden group border border-neutral-200">
+        <div className="bg-gradient-to-b from-white to-primary-50 rounded-none p-10 shadow-2xl relative group border border-neutral-200" style={{overflow: 'visible'}}>
           {/* Premium badge */}
           <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
             <span className="bg-accent-500 text-dark-900 px-6 py-2 rounded-full text-sm font-bold tracking-wide shadow-lg">
@@ -59,13 +59,13 @@ export default function Pricing() {
             ))}
           </ul>
           
-          <div className="relative z-20">
-            <a href="https://tejpics.gumroad.com/l/lwchdo?wanted=true" target="_blank" rel="noopener noreferrer" className="block w-full">
-              <Button className="w-full mb-4 relative z-30" size="lg">
+          <div className="relative z-50 bg-transparent">
+            <a href="https://tejpics.gumroad.com/l/lwchdo?wanted=true" target="_blank" rel="noopener noreferrer" className="block w-full relative z-50">
+              <button className="w-full mb-4 bg-primary-600 hover:bg-primary-700 text-white px-10 py-5 text-lg font-medium tracking-wide transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 border-0 relative z-50 rounded-none">
                 Buy on Gumroad
-              </Button>
+              </button>
             </a>
-            <p className="text-center text-sm text-dark-600 font-medium">
+            <p className="text-center text-sm text-dark-600 font-medium relative z-50">
               Secure payment via Gumroad • Instant download
             </p>
           </div>
