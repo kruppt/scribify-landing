@@ -49,10 +49,10 @@ export default function Benefits() {
           </span>
         </div>
         <h2 className="text-fluid-3xl lg:text-fluid-4xl font-bold mb-6 text-shadow">
-          Why Choose Scribify?
+          Best Mac Audio Transcription Software Features
         </h2>
         <p className="text-fluid-lg text-dark-700 max-w-3xl mx-auto leading-relaxed">
-          Experience audio transcription the way it should be - accurate, effortless, and perfectly integrated into your workflow.
+          Experience professional-grade audio transcription with AI accuracy, speech-to-text technology, and seamless workflow integration designed specifically for Mac users.
         </p>
       </div>
       

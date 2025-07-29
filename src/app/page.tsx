@@ -4,6 +4,7 @@ import TargetAudience from '@/components/TargetAudience'
 import Features from '@/components/Features'
 import EasySetup from '@/components/EasySetup'
 import Testimonials from '@/components/Testimonials'
+import FAQ from '@/components/FAQ'
 import Pricing from '@/components/Pricing'
 import FinalCTA from '@/components/FinalCTA'
 import Footer from '@/components/Footer'
@@ -18,6 +19,7 @@ export default function Home() {
       <Features />
       <EasySetup />
       <Testimonials />
+      <FAQ />
       <Pricing />
       <FinalCTA />
       <Footer />

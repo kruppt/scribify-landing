@@ -20,14 +20,14 @@ export default function Hero() {
             </div>
             
             <h1 className="text-fluid-4xl lg:text-fluid-5xl font-bold mb-6 text-shadow">
-              <span className="block">Effortless</span>
+              <span className="block">AI-Powered</span>
               <span className="block text-gradient">Audio Transcription</span>
-              <span className="block">Refined</span>
+              <span className="block">for Mac</span>
             </h1>
             
             <p className="text-fluid-lg text-dark-700 mb-6 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Transform your audio files into beautifully organized transcripts and summaries with Scribify. 
-              Advanced AI transcription technology designed exclusively for Mac users.
+              Transform audio files into accurate transcripts and summaries using OpenAI Whisper technology. 
+              The best Mac transcription app with speech-to-text AI that saves hours of manual typing.
             </p>
             
             {/* Social Proof & Value Prop */}
