@@ -7,6 +7,7 @@ import Testimonials from '@/components/Testimonials'
 import Pricing from '@/components/Pricing'
 import FinalCTA from '@/components/FinalCTA'
 import Footer from '@/components/Footer'
+import FloatingCTA from '@/components/FloatingCTA'
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Pricing />
       <FinalCTA />
       <Footer />
+      <FloatingCTA />
     </main>
   )
 }

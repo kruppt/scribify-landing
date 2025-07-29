@@ -2,19 +2,19 @@ import Section from './Section'
 
 const testimonials = [
   {
-    quote: "Scribify has completely transformed how I take notes. It's so fast and intuitive that I actually look forward to writing.",
+    quote: "Scribify turned my 2-hour lecture recordings into perfect summaries in minutes. The accuracy is incredible and saves me so much time studying.",
     author: "Sarah Chen",
     role: "Graduate Student",
     avatar: "👩‍🎓"
   },
   {
-    quote: "As a designer, I need to capture ideas quickly. Scribify's clean interface keeps me in the flow without distractions.",
+    quote: "Client interviews used to take forever to transcribe. Now I can focus on the conversation knowing Scribify will capture everything perfectly.",
     author: "Marcus Rodriguez",
     role: "UX Designer",
     avatar: "👨‍🎨"
   },
   {
-    quote: "Finally, a note-taking app that doesn't try to do everything. Scribify does one thing perfectly - notes.",
+    quote: "Meeting transcriptions that would cost me $200/month elsewhere. Scribify paid for itself in the first week with just as good quality.",
     author: "Emily Watson",
     role: "Project Manager",
     avatar: "👩‍💼"

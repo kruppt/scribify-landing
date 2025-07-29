@@ -3,20 +3,20 @@ import Section from './Section'
 const audiences = [
   {
     title: 'Students',
-    description: 'Perfect for lecture notes, research, and study materials. Organize your academic life with ease.',
-    features: ['Quick note-taking during lectures', 'Research organization', 'Study material compilation'],
+    description: 'Transform recorded lectures into searchable transcripts and study guides. Never miss important details again.',
+    features: ['Lecture recording transcription', 'Automated study summaries', 'Interview research analysis'],
     image: '🎓'
   },
   {
     title: 'Professionals',
-    description: 'Streamline meeting notes, project planning, and daily thoughts for maximum productivity.',
-    features: ['Meeting minutes', 'Project documentation', 'Daily journaling'],
+    description: 'Convert meetings, calls, and interviews into actionable transcripts with key insights highlighted.',
+    features: ['Meeting transcription & summaries', 'Client interview processing', 'Podcast content creation'],
     image: '💼'
   },
   {
-    title: 'Creatives',
-    description: 'Capture inspiration, brainstorm ideas, and organize creative projects in one beautiful space.',
-    features: ['Idea capture', 'Creative brainstorming', 'Project planning'],
+    title: 'Content Creators',
+    description: 'Turn audio content into written form for blogs, social media, and documentation with perfect accuracy.',
+    features: ['Podcast episode transcripts', 'Video content to articles', 'Voice memo processing'],
     image: '🎨'
   }
 ]
@@ -29,7 +29,7 @@ export default function TargetAudience() {
           Built for Everyone
         </h2>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Whether you're a student, professional, or creative, Scribify adapts to your unique note-taking needs.
+          Whether you're a student, professional, or content creator, Scribify transforms your audio into actionable insights.
         </p>
       </div>
       

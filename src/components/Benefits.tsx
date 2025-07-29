@@ -79,6 +79,24 @@ export default function Benefits() {
           </div>
         ))}
       </div>
+      
+      {/* Conversion CTA */}
+      <div className="text-center mt-16">
+        <div className="bg-gradient-to-r from-accent-100 to-primary-100 rounded-2xl p-8 max-w-2xl mx-auto">
+          <h3 className="text-2xl font-bold text-dark-900 mb-4">Ready to Experience Perfect Transcription?</h3>
+          <p className="text-dark-700 mb-6">Join 2,500+ Mac users saving hours every week with AI-powered transcription.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="https://tejpics.gumroad.com/l/lwchdo?wanted=true" target="_blank" rel="noopener noreferrer">
+              <button className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-none font-bold transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5">
+                Get Scribify - $25
+              </button>
+            </a>
+            <div className="text-sm text-dark-600">
+              <span className="font-medium text-green-600">Save $179/year</span> vs competitors
+            </div>
+          </div>
+        </div>
+      </div>
     </Section>
   )
 }

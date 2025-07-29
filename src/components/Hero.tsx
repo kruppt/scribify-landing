@@ -25,10 +25,24 @@ export default function Hero() {
               <span className="block">Refined</span>
             </h1>
             
-            <p className="text-fluid-lg text-dark-700 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-fluid-lg text-dark-700 mb-6 max-w-xl mx-auto lg:mx-0 leading-relaxed">
               Transform your audio files into beautifully organized transcripts and summaries with Scribify. 
               Advanced AI transcription technology designed exclusively for Mac users.
             </p>
+            
+            {/* Social Proof & Value Prop */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 mb-8 max-w-xl mx-auto lg:mx-0 border border-accent-200/50">
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-2">
+                  <span className="text-2xl">🎉</span>
+                  <span className="font-bold text-accent-700">Join 2,500+ Mac users</span>
+                </div>
+                <div className="text-green-600 font-bold">Save $179/year</div>
+              </div>
+              <div className="text-sm text-dark-600">
+                <span className="font-medium">$25 once</span> vs competitors at <span className="line-through text-red-500">$204/year</span>
+              </div>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
               <a href="https://tejpics.gumroad.com/l/lwchdo?wanted=true" target="_blank" rel="noopener noreferrer">
