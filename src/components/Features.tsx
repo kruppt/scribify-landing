@@ -2,27 +2,51 @@ import Section from './Section'
 
 const features = [
   {
-    title: 'Distraction-Free Writing',
-    description: 'Clean, minimal interface that gets out of your way so you can focus on your thoughts. Every element is carefully crafted for the ultimate writing experience.',
-    screenshot: '📝',
+    title: 'AI-Powered Transcription Engine',
+    description: 'Transform hours of audio into perfect text in minutes. Powered by OpenAI\'s advanced Whisper technology with industry-leading accuracy.',
+    screenshot: '⚡',
     accent: 'accent-400'
   },
   {
-    title: 'Powerful Organization',
-    description: 'Tag, categorize, and organize your notes with an intuitive folder system. Your ideas deserve a sophisticated home.',
-    screenshot: '📂',
+    title: '15 Intelligent Summary Templates',
+    description: 'Never stare at a blank page again. Choose from expertly crafted templates for meetings, interviews, lectures, and more.',
+    screenshot: '🧠',
     accent: 'primary-400'
   },
   {
-    title: 'Advanced Search',
-    description: 'Find any note instantly with intelligent search that understands context and content. Never lose a thought again.',
-    screenshot: '🔍',
+    title: 'Privacy-First Design',
+    description: 'Your conversations stay yours. Process everything locally with your OpenAI account. Zero data collection, military-grade security.',
+    screenshot: '🔐',
     accent: 'accent-500'
   },
   {
-    title: 'Rich Text Support',
-    description: 'Format your notes with markdown support, code blocks, and rich text formatting. Express yourself with style.',
-    screenshot: '✨',
+    title: 'Pay Once, Use Forever',
+    description: 'Stop bleeding money on subscriptions! $49 once vs $204/year elsewhere. Process unlimited audio at OpenAI rates (~$0.006/minute).',
+    screenshot: '💰',
+    accent: 'primary-500'
+  },
+  {
+    title: 'Professional-Grade Output',
+    description: 'One-click exports to Notion, OneNote, Evernote, or PDF/Word. Meeting-ready formatting with timestamps and action items.',
+    screenshot: '🚀',
+    accent: 'accent-400'
+  },
+  {
+    title: 'Lightning-Fast Processing',
+    description: 'No waiting rooms or queues. Direct OpenAI connection means real-time processing. Upload → Process → Export in under 3 minutes.',
+    screenshot: '⚡',
+    accent: 'primary-400'
+  },
+  {
+    title: 'Smart Content Recognition',
+    description: 'AI that understands context. Automatically identifies speakers, extracts action items, and structures content intelligently.',
+    screenshot: '🎯',
+    accent: 'accent-500'
+  },
+  {
+    title: 'Native Mac Performance',
+    description: 'Built for macOS with Apple Silicon optimization. Elegant native interface with minimal battery drain on M1/M2/M3 Macs.',
+    screenshot: '🖥️',
     accent: 'primary-500'
   }
 ]
@@ -33,15 +57,14 @@ export default function Features() {
       <div className="text-center mb-24">
         <div className="mb-6">
           <span className="inline-block px-4 py-2 bg-white text-primary-800 text-sm font-medium tracking-wide rounded-full shadow-sm">
-            CRAFTED EXPERIENCES
+            AI-POWERED TRANSCRIPTION
           </span>
         </div>
         <h2 className="text-fluid-3xl lg:text-fluid-4xl font-bold mb-6 text-shadow">
           Powerful Features
         </h2>
         <p className="text-fluid-lg text-dark-700 max-w-3xl mx-auto leading-relaxed">
-          Everything you need for effective note-taking, without the complexity you don't. 
-          Elegance meets functionality.
+          Everything you need to transform audio into actionable insights, powered by cutting-edge AI technology.
         </p>
       </div>
       
@@ -58,7 +81,7 @@ export default function Features() {
                 </p>
                 <div className="flex items-center gap-4">
                   <div className={`w-3 h-3 bg-${feature.accent} rounded-full`}></div>
-                  <span className="text-sm text-dark-600 font-medium tracking-wide">PREMIUM CRAFTSMANSHIP</span>
+                  <span className="text-sm text-dark-600 font-medium tracking-wide">AI-POWERED EXCELLENCE</span>
                 </div>
               </div>
             </div>
