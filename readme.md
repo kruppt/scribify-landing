@@ -1,71 +1,59 @@
-Page Structure
+# Scribify Landing Page
 
-Hero Section
+A premium landing page for Scribify - an AI-powered audio transcription app for Mac users.
 
-Main headline, subheading, hero image (high-quality screenshot/mockup), CTA button.
+## 🎯 Features
 
-Benefits Overview
+- **Premium Design**: Sophisticated design inspired by modern minimalism
+- **Fully Responsive**: Optimized for desktop, tablet, and mobile devices
+- **Performance Optimized**: Fast loading with optimized assets
+- **SEO Ready**: Proper meta tags and structured data
+- **Netlify Ready**: Pre-configured for seamless deployment
 
-Icons or illustrations supporting the listed benefits.
+## 🛠️ Tech Stack
 
-Target Audience Cards
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Type safety and better development experience
+- **Tailwind CSS** - Utility-first CSS framework
+- **Responsive Design** - Mobile-first approach
 
-Three distinct sections with images and personalized copy.
+## 🚀 Quick Start
 
-Feature Highlights
+```bash
+# Install dependencies
+npm install
 
-Screenshots/mockups clearly illustrating features with concise descriptions.
+# Start development server
+npm run dev
 
-Easy Setup
+# Build for production
+npm run build
+```
 
-Visual step-by-step guide image or infographic.
+## 📁 Project Structure
 
-Testimonials
+```
+src/
+├── app/                 # Next.js App Router
+├── components/          # React components
+└── ...
 
-Brief testimonials, ideally with user images or avatars.
+public/                  # Static assets
+```
 
-Pricing Section
+## 🌐 Deployment
 
-Clear, transparent pricing information and strong CTA.
+This project is configured for deployment on:
+- **Netlify** (recommended)
+- **Vercel** 
+- **GitHub Pages**
 
-FAQs
+See deployment guides in the docs folder for detailed instructions.
 
-Expandable/collapsible questions for cleaner UI.
+## 📝 License
 
-Final Call to Action
+This project is for demonstration purposes.
 
-Reinforce the value and prompt immediate action.
+---
 
-Visual Requirements
-
-Modern, minimalist design focusing on ease-of-use and readability.
-
-Consistent branding (fonts, colors, button styles).
-
-Mobile-responsive design ensuring compatibility across all devices.
-
-Optimized loading speed (compressed images, minified code).
-
-Non-Functional Requirements
-
-Performance:
-
-Page load under 2 seconds.
-
-Optimized images and assets.
-
-Accessibility:
-
-Compliant with WCAG 2.1 Level AA standards.
-
-SEO:
-
-Optimized meta titles and descriptions.
-
-Proper heading structure (H1, H2, H3).
-
-Security:
-
-Secure hosting environment.
-
-HTTPS implementation.
+**Built with ❤️ for the Scribify community**
