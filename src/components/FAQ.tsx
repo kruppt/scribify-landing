@@ -17,16 +17,16 @@ const faqs = [
     answer: 'Scribify optionally supports iCloud sync, so your notes can be available across all your Apple devices. Sync is optional and can be enabled in preferences.'
   },
   {
-    question: 'Is there a free trial?',
-    answer: 'Yes! Scribify comes with a 14-day free trial with full access to all features. No credit card required to start your trial.'
-  },
-  {
     question: 'What file formats can I export to?',
     answer: 'You can export your notes to various formats including Markdown, Plain Text, PDF, and HTML. This ensures your notes are never locked into our format.'
   },
   {
-    question: 'Do you offer refunds?',
-    answer: 'Absolutely! We offer a 30-day money-back guarantee. If you\'re not completely satisfied with Scribify, we\'ll refund your purchase, no questions asked.'
+    question: 'How does the payment process work?',
+    answer: 'Scribify uses Stripe for secure payment processing. When you click "Buy Now", you\'ll be taken to a secure Stripe checkout page. After your $25 one-time payment, you\'ll be redirected to a download page where you can get the app for your Mac.'
+  },
+  {
+    question: 'Is the payment secure?',
+    answer: 'Absolutely. Payments are processed by Stripe, one of the world\'s most trusted payment platforms used by companies like Amazon, Google, and Shopify. Your card details are never stored on our servers.'
   }
 ]
 
