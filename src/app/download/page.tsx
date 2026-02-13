@@ -1,0 +1,222 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+
+const DOWNLOADS = {
+  arm64: {
+    url: 'https://github.com/kruppt/scribify-releases/releases/download/v2.5.0/Scribify-2.5.0-arm64.dmg',
+    label: 'Apple Silicon (M1/M2/M3/M4)',
+    filename: 'Scribify-2.5.0-arm64.dmg',
+    size: '~94 MB',
+  },
+  intel: {
+    url: 'https://github.com/kruppt/scribify-releases/releases/download/v2.5.0/Scribify-2.5.0.dmg',
+    label: 'Intel',
+    filename: 'Scribify-2.5.0.dmg',
+    size: '~101 MB',
+  },
+}
+
+function detectArch(): 'arm64' | 'intel' | null {
+  if (typeof navigator === 'undefined') return null
+  const ua = navigator.userAgent.toLowerCase()
+  if (ua.includes('arm64') || ua.includes('aarch64')) return 'arm64'
+  // Modern Apple Silicon Macs may not expose arm64 in UA,
+  // but navigator.platform or userAgentData can help
+  if ('userAgentData' in navigator) {
+    return null // Can't determine synchronously, default to showing both
+  }
+  if (ua.includes('mac')) return null // Can't determine, show both
+  return null
+}
+
+export default function DownloadPage() {
+  const [detectedArch, setDetectedArch] = useState<'arm64' | 'intel' | null>(null)
+
+  useEffect(() => {
+    setDetectedArch(detectArch())
+  }, [])
+
+  const recommended = detectedArch ? DOWNLOADS[detectedArch] : null
+  const other = detectedArch === 'arm64' ? DOWNLOADS.intel : detectedArch === 'intel' ? DOWNLOADS.arm64 : null
+
+  return (
+    <main className="min-h-screen bg-gradient-to-b from-primary-50 via-primary-100 to-primary-200">
+      <div className="container-width section-padding">
+        <div className="max-w-2xl mx-auto text-center">
+          {/* Thank you header */}
+          <div className="mb-12 pt-12">
+            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <span className="text-4xl">✓</span>
+            </div>
+            <h1 className="text-fluid-3xl lg:text-fluid-4xl font-bold mb-4 text-dark-900">
+              Thank You for Your Purchase!
+            </h1>
+            <p className="text-fluid-lg text-dark-700">
+              Download Scribify for your Mac below.
+            </p>
+          </div>
+
+          {/* Download cards */}
+          <div className="space-y-4 mb-12">
+            {recommended ? (
+              <>
+                {/* Recommended download */}
+                <a
+                  href={recommended.url}
+                  className="block bg-white rounded-2xl p-8 shadow-lg border-2 border-accent-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="text-left">
+                      <span className="inline-block px-3 py-1 bg-accent-100 text-accent-800 text-xs font-bold rounded-full mb-2">
+                        RECOMMENDED FOR YOUR MAC
+                      </span>
+                      <h3 className="text-xl font-bold text-dark-900">{recommended.label}</h3>
+                      <p className="text-dark-600 text-sm">{recommended.filename} ({recommended.size})</p>
+                    </div>
+                    <span className="text-3xl">⬇️</span>
+                  </div>
+                </a>
+
+                {/* Other architecture */}
+                {other && (
+                  <a
+                    href={other.url}
+                    className="block bg-white/70 rounded-2xl p-6 shadow border border-neutral-200 hover:shadow-md transition-all duration-300"
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="text-left">
+                        <h3 className="text-lg font-medium text-dark-700">{other.label}</h3>
+                        <p className="text-dark-500 text-sm">{other.filename} ({other.size})</p>
+                      </div>
+                      <span className="text-xl text-dark-400">⬇️</span>
+                    </div>
+                  </a>
+                )}
+              </>
+            ) : (
+              <>
+                {/* Show both when can't detect */}
+                <a
+                  href={DOWNLOADS.arm64.url}
+                  className="block bg-white rounded-2xl p-8 shadow-lg border-2 border-accent-500 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="text-left">
+                      <span className="inline-block px-3 py-1 bg-accent-100 text-accent-800 text-xs font-bold rounded-full mb-2">
+                        MOST MACS (2020+)
+                      </span>
+                      <h3 className="text-xl font-bold text-dark-900">{DOWNLOADS.arm64.label}</h3>
+                      <p className="text-dark-600 text-sm">{DOWNLOADS.arm64.filename} ({DOWNLOADS.arm64.size})</p>
+                    </div>
+                    <span className="text-3xl">⬇️</span>
+                  </div>
+                </a>
+
+                <a
+                  href={DOWNLOADS.intel.url}
+                  className="block bg-white/70 rounded-2xl p-6 shadow border border-neutral-200 hover:shadow-md transition-all duration-300"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="text-left">
+                      <span className="inline-block px-3 py-1 bg-neutral-100 text-dark-600 text-xs font-bold rounded-full mb-2">
+                        OLDER MACS (PRE-2020)
+                      </span>
+                      <h3 className="text-lg font-medium text-dark-700">{DOWNLOADS.intel.label}</h3>
+                      <p className="text-dark-500 text-sm">{DOWNLOADS.intel.filename} ({DOWNLOADS.intel.size})</p>
+                    </div>
+                    <span className="text-xl text-dark-400">⬇️</span>
+                  </div>
+                </a>
+              </>
+            )}
+          </div>
+
+          {/* Setup instructions */}
+          <div className="bg-white rounded-2xl p-8 shadow text-left mb-8">
+            <h2 className="text-xl font-bold text-dark-900 mb-6">Installation Guide</h2>
+            <ol className="space-y-6">
+              <li className="flex gap-4">
+                <span className="flex-shrink-0 w-8 h-8 bg-primary-100 text-primary-700 rounded-full flex items-center justify-center font-bold text-sm">1</span>
+                <div>
+                  <p className="font-medium text-dark-800">Open the downloaded DMG file</p>
+                  <p className="text-dark-600 text-sm">Find the .dmg file in your Downloads folder and double-click it. A new window will open showing the Scribify app icon and an Applications folder shortcut.</p>
+                </div>
+              </li>
+              <li className="flex gap-4">
+                <span className="flex-shrink-0 w-8 h-8 bg-primary-100 text-primary-700 rounded-full flex items-center justify-center font-bold text-sm">2</span>
+                <div>
+                  <p className="font-medium text-dark-800">Drag Scribify to Applications</p>
+                  <p className="text-dark-600 text-sm">Drag the Scribify icon onto the Applications folder in the installer window. This copies the app to your Mac.</p>
+                </div>
+              </li>
+              <li className="flex gap-4">
+                <span className="flex-shrink-0 w-8 h-8 bg-primary-100 text-primary-700 rounded-full flex items-center justify-center font-bold text-sm">3</span>
+                <div>
+                  <p className="font-medium text-dark-800">Launch Scribify</p>
+                  <p className="text-dark-600 text-sm">Open Scribify from your Applications folder, Launchpad, or use Spotlight (Cmd + Space, type &quot;Scribify&quot;).</p>
+                </div>
+              </li>
+              <li className="flex gap-4">
+                <span className="flex-shrink-0 w-8 h-8 bg-primary-100 text-primary-700 rounded-full flex items-center justify-center font-bold text-sm">4</span>
+                <div>
+                  <p className="font-medium text-dark-800">Start transcribing</p>
+                  <p className="text-dark-600 text-sm">Drag an audio file into Scribify or click the &quot;+&quot; button to select one. Choose a summary template and let the AI do the rest.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          {/* Gatekeeper / troubleshooting */}
+          <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6 text-left mb-8">
+            <h3 className="font-bold text-dark-800 mb-3 flex items-center gap-2">
+              <span className="text-lg">&#9888;&#65039;</span>
+              First Launch: macOS Security Prompt
+            </h3>
+            <p className="text-dark-700 text-sm mb-3">
+              When you first open Scribify, macOS may show a security warning because the app was downloaded from the internet. This is normal for apps outside the App Store.
+            </p>
+            <div className="bg-white rounded-lg p-4 text-sm text-dark-700 space-y-2">
+              <p><strong>If you see &quot;Scribify can&apos;t be opened&quot;:</strong></p>
+              <ol className="list-decimal list-inside space-y-1 ml-2">
+                <li>Right-click (or Control-click) on Scribify in Applications</li>
+                <li>Select <strong>&quot;Open&quot;</strong> from the menu</li>
+                <li>Click <strong>&quot;Open&quot;</strong> in the dialog that appears</li>
+              </ol>
+              <p className="text-dark-500 mt-2">You only need to do this once. After that, Scribify will open normally. The app is signed and notarized by Apple for your security.</p>
+            </div>
+          </div>
+
+          {/* Quick tips */}
+          <div className="bg-white rounded-2xl p-6 shadow text-left mb-12">
+            <h3 className="font-bold text-dark-900 mb-4">Quick Tips</h3>
+            <ul className="space-y-3 text-sm text-dark-700">
+              <li className="flex gap-3">
+                <span className="text-accent-500 font-bold">&#x2022;</span>
+                <span><strong>Supported formats:</strong> MP3, WAV, M4A, FLAC, OGG, and more</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent-500 font-bold">&#x2022;</span>
+                <span><strong>Templates:</strong> Choose from 15 built-in templates or create your own for meetings, lectures, interviews, etc.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent-500 font-bold">&#x2022;</span>
+                <span><strong>Export:</strong> Copy to clipboard, or export to Notion, OneNote, Evernote, and more</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent-500 font-bold">&#x2022;</span>
+                <span><strong>Privacy:</strong> All transcription happens locally on your Mac — your audio never leaves your device</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Which version + support */}
+          <div className="text-sm text-dark-500 pb-12">
+            <p>Not sure which version to download? If your Mac was made in 2020 or later, choose <strong>Apple Silicon</strong>. To check: Apple menu &gt; About This Mac &gt; look for &quot;Chip&quot; (Apple Silicon) or &quot;Processor&quot; (Intel).</p>
+            <p className="mt-3">Need help? Contact us at <a href="mailto:support@scribifyforall.com" className="text-primary-600 hover:underline">support@scribifyforall.com</a></p>
+          </div>
+        </div>
+      </div>
+    </main>
+  )
+}

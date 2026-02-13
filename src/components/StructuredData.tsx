@@ -27,7 +27,7 @@ export default function StructuredData() {
           "price": "25",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
-          "url": "https://tejpics.gumroad.com/l/lwchdo?wanted=true",
+          "url": "https://scribifyforall.com/#pricing",
           "seller": {
             "@type": "Organization",
             "@id": "https://scribifyforall.com/#organization"

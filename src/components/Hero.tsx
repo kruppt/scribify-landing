@@ -45,7 +45,7 @@ export default function Hero() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
-              <a href="https://tejpics.gumroad.com/l/lwchdo?wanted=true" target="_blank" rel="noopener noreferrer">
+              <a href="https://buy.stripe.com/dRmbJ3eB9cgO6D92RCbQY05" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="w-full sm:w-auto">
                   Buy Now - $25
                 </Button>

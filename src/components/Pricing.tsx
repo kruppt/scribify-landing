@@ -47,7 +47,7 @@ export default function Pricing() {
               'Export to favorite apps',
               'Pre-defined templates',
               'Custom template creation',
-              'Instant download via Gumroad',
+              'Instant download after purchase',
               'Lifetime updates included'
             ].map((feature, index) => (
               <li key={index} className="flex items-center group">
@@ -60,13 +60,13 @@ export default function Pricing() {
           </ul>
           
           <div className="relative z-50 bg-transparent">
-            <a href="https://tejpics.gumroad.com/l/lwchdo?wanted=true" target="_blank" rel="noopener noreferrer" className="block w-full relative z-50">
+            <a href="https://buy.stripe.com/dRmbJ3eB9cgO6D92RCbQY05" target="_blank" rel="noopener noreferrer" className="block w-full relative z-50">
               <button className="w-full mb-4 bg-primary-600 hover:bg-primary-700 text-white px-10 py-5 text-lg font-medium tracking-wide transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 border-0 relative z-50 rounded-none">
-                Buy on Gumroad
+                Buy Now - $25
               </button>
             </a>
             <p className="text-center text-sm text-dark-600 font-medium relative z-50">
-              Secure payment via Gumroad • Instant download
+              Secure payment via Stripe • Instant download
             </p>
           </div>
         </div>

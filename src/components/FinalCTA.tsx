@@ -32,7 +32,7 @@ export default function FinalCTA() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-              <a href="https://tejpics.gumroad.com/l/lwchdo?wanted=true" target="_blank" rel="noopener noreferrer">
+              <a href="https://buy.stripe.com/dRmbJ3eB9cgO6D92RCbQY05" target="_blank" rel="noopener noreferrer">
                 <Button 
                   variant="secondary" 
                   size="lg" 
@@ -59,7 +59,7 @@ export default function FinalCTA() {
               </div>
               <div className="flex flex-col items-center">
                 <div className="w-3 h-3 bg-accent-400 rounded-full mb-2"></div>
-                <span className="text-sm opacity-75 font-medium">Secure payment via Gumroad</span>
+                <span className="text-sm opacity-75 font-medium">Secure payment via Stripe</span>
               </div>
               <div className="flex flex-col items-center">
                 <div className="w-3 h-3 bg-accent-400 rounded-full mb-2"></div>

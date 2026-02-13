@@ -30,27 +30,15 @@ The signed and notarized macOS builds are located in the sibling project:
 
 ## Hosting Downloads
 
-To serve downloads from this website, copy the DMG files to the `public/downloads/` directory:
+Downloads are hosted via **GitHub Releases** on the public releases repo (`kruppt/scribify-releases`). DMG files are ~100MB each (too large for Netlify's deploy limit). Source code stays private in `kruppt/scribify`.
 
-```bash
-mkdir -p /Users/tejas/projects/scribify_landingpage/public/downloads
-cp /Users/tejas/projects/claude_transcript/dist/Scribify-2.5.0-arm64.dmg /Users/tejas/projects/scribify_landingpage/public/downloads/
-cp /Users/tejas/projects/claude_transcript/dist/Scribify-2.5.0.dmg /Users/tejas/projects/scribify_landingpage/public/downloads/
+Download URLs (update version as needed):
+```
+https://github.com/kruppt/scribify-releases/releases/download/v2.5.0/Scribify-2.5.0-arm64.dmg   (Apple Silicon)
+https://github.com/kruppt/scribify-releases/releases/download/v2.5.0/Scribify-2.5.0.dmg          (Intel)
 ```
 
-Then link to them in the site:
-```
-/downloads/Scribify-2.5.0-arm64.dmg   (Apple Silicon)
-/downloads/Scribify-2.5.0.dmg          (Intel)
-```
-
-**Important:** DMG files are ~100MB each. If hosting on Netlify (free tier has 100MB deploy limit), use an external file host (e.g., GitHub Releases, S3, Cloudflare R2) and link externally instead.
-
-### Alternative: External Download Hosting
-If files are too large for Netlify, upload to:
-- **GitHub Releases:** Create a release at the app repo and attach DMGs
-- **Cloudflare R2 / AWS S3:** Upload and use direct URLs
-- **Gumroad:** Current product page at https://tejpics.gumroad.com/l/lwchdo
+These are referenced in `src/app/download/page.tsx`.
 
 ## Landing Page Structure
 
@@ -64,27 +52,27 @@ src/
     Features.tsx       # Feature highlights
     Benefits.tsx       # User benefits
     EasySetup.tsx      # Setup instructions
-    Pricing.tsx        # Pricing section (Gumroad integration)
+    Pricing.tsx        # Pricing section (Stripe integration)
     FAQ.tsx            # Frequently asked questions
     FinalCTA.tsx       # Bottom call-to-action
     FloatingCTA.tsx    # Floating buy button
     Footer.tsx         # Site footer
     Testimonials.tsx   # User testimonials
     TargetAudience.tsx # Target audience section
-    GumroadTracking.tsx # Gumroad analytics
 ```
 
-## Current Sales Flow
+## Sales Flow (Stripe + GitHub Releases)
 1. User visits landing page
-2. Clicks buy/download button -> redirects to Gumroad
-3. Gumroad handles payment and delivers license key
-4. User downloads app from Gumroad
+2. Clicks "Buy Now" button -> redirects to Stripe Payment Link (hosted checkout)
+3. Stripe processes $25 payment
+4. Stripe redirects to `/download` page on scribifyforall.com
+5. Download page shows DMG links (hosted on GitHub Releases)
+6. Auto-detects Apple Silicon vs Intel and highlights the correct download
 
-## Desired Sales Flow (Direct Downloads)
-1. User visits landing page
-2. Clicks buy button -> payment handled (Gumroad or direct)
-3. After purchase, user gets download links for the signed DMGs
-4. Auto-detect Apple Silicon vs Intel and offer correct DMG
+### Setup Requirements
+- **Stripe Payment Link:** Create in Stripe Dashboard, set success URL to `https://scribifyforall.com/download`
+- **GitHub Release:** Upload DMGs to a release on the app repo
+- **Update placeholder URLs:** Search for `YOUR_PAYMENT_LINK` in components and replace with actual Stripe URL
 
 ## Key Files
 - `netlify.toml` - Netlify deployment config
