@@ -167,6 +167,37 @@ export default function DownloadPage() {
             </ol>
           </div>
 
+          {/* OpenAI API Setup */}
+          <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6 text-left mb-8">
+            <h3 className="font-bold text-dark-800 mb-3 flex items-center gap-2">
+              <span className="text-lg">&#x1F511;</span>
+              Setting Up Your OpenAI API Key
+            </h3>
+            <p className="text-dark-700 text-sm mb-4">
+              Scribify uses OpenAI&apos;s Whisper API for transcription and GPT-4 for summaries. You&apos;ll need your own OpenAI API key to use the app.
+            </p>
+            <div className="bg-white rounded-lg p-4 text-sm text-dark-700 space-y-3">
+              <p><strong>How to get your API key:</strong></p>
+              <ol className="list-decimal list-inside space-y-2 ml-2">
+                <li>Go to <a href="https://platform.openai.com/signup" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">platform.openai.com</a> and create an account (or sign in)</li>
+                <li>Navigate to <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline font-medium">API Keys</a> in your dashboard</li>
+                <li>Click <strong>&quot;Create new secret key&quot;</strong> and copy it</li>
+                <li>Open Scribify, go to <strong>Settings</strong>, and paste your API key</li>
+              </ol>
+              <div className="bg-blue-50 rounded-lg p-3 mt-3">
+                <p className="font-medium text-dark-800 mb-1">About API costs:</p>
+                <ul className="space-y-1 text-dark-600">
+                  <li>&#x2022; OpenAI charges based on usage (pay-as-you-go)</li>
+                  <li>&#x2022; Whisper transcription costs ~$0.006 per minute of audio</li>
+                  <li>&#x2022; A typical 1-hour recording costs about $0.36 to transcribe</li>
+                  <li>&#x2022; New OpenAI accounts include free credits to get started</li>
+                  <li>&#x2022; You can set spending limits in your <a href="https://platform.openai.com/settings/organization/limits" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:underline">OpenAI dashboard</a></li>
+                </ul>
+              </div>
+              <p className="text-dark-500 mt-2">Your API key is stored securely in your Mac&apos;s Keychain and never leaves your device.</p>
+            </div>
+          </div>
+
           {/* Gatekeeper / troubleshooting */}
           <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6 text-left mb-8">
             <h3 className="font-bold text-dark-800 mb-3 flex items-center gap-2">
