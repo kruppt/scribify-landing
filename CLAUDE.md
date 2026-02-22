@@ -11,14 +11,12 @@ The signed and notarized macOS builds are located in the sibling project:
 /Users/tejas/projects/claude_transcript/dist/
 ```
 
-### Available Builds (v2.5.0)
+### Available Builds (v2.6.0)
 
 | File | Architecture | Format | Size |
 |------|-------------|--------|------|
-| `Scribify-2.5.0-arm64.dmg` | Apple Silicon (M1/M2/M3) | DMG | ~94 MB |
-| `Scribify-2.5.0.dmg` | Intel (x64) | DMG | ~101 MB |
-| `Scribify-2.5.0-arm64-mac.zip` | Apple Silicon | ZIP | ~90 MB |
-| `Scribify-2.5.0-mac.zip` | Intel (x64) | ZIP | ~96 MB |
+| `Scribify-2.6.0-arm64.dmg` | Apple Silicon (M1/M2/M3) | DMG | ~95 MB |
+| `Scribify-2.6.0.dmg` | Intel (x64) | DMG | ~102 MB |
 
 ### Code Signing Details
 - **Signed by:** Developer ID Application: Tejas Shah (M9F8AM98LS)
@@ -34,8 +32,8 @@ Downloads are hosted via **GitHub Releases** on the public releases repo (`krupp
 
 Download URLs (update version as needed):
 ```
-https://github.com/kruppt/scribify-releases/releases/download/v2.5.0/Scribify-2.5.0-arm64.dmg   (Apple Silicon)
-https://github.com/kruppt/scribify-releases/releases/download/v2.5.0/Scribify-2.5.0.dmg          (Intel)
+https://github.com/kruppt/scribify-releases/releases/download/v2.6.0/Scribify-2.5.0-arm64.dmg   (Apple Silicon)
+https://github.com/kruppt/scribify-releases/releases/download/v2.6.0/Scribify-2.5.0.dmg          (Intel)
 ```
 
 These are referenced in `src/app/download/page.tsx`.

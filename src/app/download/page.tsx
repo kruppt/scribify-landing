@@ -4,16 +4,16 @@ import { useState, useEffect } from 'react'
 
 const DOWNLOADS = {
   arm64: {
-    url: 'https://github.com/kruppt/scribify-releases/releases/download/v2.5.0/Scribify-2.5.0-arm64.dmg',
+    url: 'https://github.com/kruppt/scribify-releases/releases/download/v2.6.0/Scribify-2.6.0-arm64.dmg',
     label: 'Apple Silicon (M1/M2/M3/M4)',
-    filename: 'Scribify-2.5.0-arm64.dmg',
-    size: '~94 MB',
+    filename: 'Scribify-2.6.0-arm64.dmg',
+    size: '~95 MB',
   },
   intel: {
-    url: 'https://github.com/kruppt/scribify-releases/releases/download/v2.5.0/Scribify-2.5.0.dmg',
+    url: 'https://github.com/kruppt/scribify-releases/releases/download/v2.6.0/Scribify-2.6.0.dmg',
     label: 'Intel',
-    filename: 'Scribify-2.5.0.dmg',
-    size: '~101 MB',
+    filename: 'Scribify-2.6.0.dmg',
+    size: '~102 MB',
   },
 }
 
