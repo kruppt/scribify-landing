@@ -132,6 +132,43 @@ export default function DownloadPage() {
             )}
           </div>
 
+          {/* PDF Resources */}
+          <div className="bg-white rounded-2xl p-6 shadow text-left mb-8">
+            <h2 className="text-xl font-bold text-dark-900 mb-4">Resources</h2>
+            <div className="space-y-3">
+              <a
+                href="https://github.com/kruppt/scribify-releases/releases/download/v2.6.0/Scribify_User_Guide.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between p-4 rounded-xl border border-neutral-200 hover:border-primary-400 hover:bg-primary-50 transition-all duration-200"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">📄</span>
+                  <div>
+                    <p className="font-medium text-dark-800">User Guide</p>
+                    <p className="text-dark-500 text-xs">Complete setup and usage instructions</p>
+                  </div>
+                </div>
+                <span className="text-primary-600 text-sm font-medium">Download PDF</span>
+              </a>
+              <a
+                href="https://github.com/kruppt/scribify-releases/releases/download/v2.6.0/Scribify_Sample_Summaries.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between p-4 rounded-xl border border-neutral-200 hover:border-primary-400 hover:bg-primary-50 transition-all duration-200"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">📋</span>
+                  <div>
+                    <p className="font-medium text-dark-800">Sample Summaries</p>
+                    <p className="text-dark-500 text-xs">See what Scribify&apos;s output looks like</p>
+                  </div>
+                </div>
+                <span className="text-primary-600 text-sm font-medium">Download PDF</span>
+              </a>
+            </div>
+          </div>
+
           {/* Setup instructions */}
           <div className="bg-white rounded-2xl p-8 shadow text-left mb-8">
             <h2 className="text-xl font-bold text-dark-900 mb-6">Installation Guide</h2>
