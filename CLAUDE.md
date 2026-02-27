@@ -36,7 +36,7 @@ https://github.com/kruppt/scribify-releases/releases/download/v2.6.0/Scribify-2.
 https://github.com/kruppt/scribify-releases/releases/download/v2.6.0/Scribify-2.5.0.dmg          (Intel)
 ```
 
-These are referenced in `src/app/download/page.tsx`.
+These are referenced in `src/app/access/page.tsx`.
 
 ## Landing Page Structure
 
@@ -63,14 +63,15 @@ src/
 1. User visits landing page
 2. Clicks "Buy Now" button -> redirects to Stripe Payment Link (hosted checkout)
 3. Stripe processes $25 payment
-4. Stripe redirects to `/download` page on scribifyforall.com
-5. Download page shows DMG links (hosted on GitHub Releases)
-6. Auto-detects Apple Silicon vs Intel and highlights the correct download
+4. Stripe redirects to `/access?session_id={CHECKOUT_SESSION_ID}` on scribifyforall.com
+5. Download page verifies session_id is present (redirects to home if missing)
+6. Download page shows DMG links (hosted on GitHub Releases)
+7. Auto-detects Apple Silicon vs Intel and highlights the correct download
 
 ### Setup Requirements
-- **Stripe Payment Link:** Create in Stripe Dashboard, set success URL to `https://scribifyforall.com/download`
-- **GitHub Release:** Upload DMGs to a release on the app repo
-- **Update placeholder URLs:** Search for `YOUR_PAYMENT_LINK` in components and replace with actual Stripe URL
+- **Stripe Payment Link:** Success URL must be `https://scribifyforall.com/access?session_id={CHECKOUT_SESSION_ID}`
+- **GitHub Release:** Upload DMGs to a release on `kruppt/scribify-releases`
+- **Download page:** `src/app/access/page.tsx` (noindexed, session-gated)
 
 ## Key Files
 - `netlify.toml` - Netlify deployment config
