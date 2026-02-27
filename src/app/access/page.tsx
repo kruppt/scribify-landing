@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 
 const DOWNLOADS = {
   arm64: {
@@ -32,13 +33,25 @@ function detectArch(): 'arm64' | 'intel' | null {
 
 export default function DownloadPage() {
   const [detectedArch, setDetectedArch] = useState<'arm64' | 'intel' | null>(null)
+  const [authorized, setAuthorized] = useState(false)
+  const router = useRouter()
 
   useEffect(() => {
+    // Require a Stripe session_id in the URL — only present after a real checkout
+    const params = new URLSearchParams(window.location.search)
+    const sessionId = params.get('session_id')
+    if (!sessionId || !sessionId.startsWith('cs_')) {
+      router.replace('/')
+      return
+    }
+    setAuthorized(true)
     setDetectedArch(detectArch())
   }, [])
 
   const recommended = detectedArch ? DOWNLOADS[detectedArch] : null
   const other = detectedArch === 'arm64' ? DOWNLOADS.intel : detectedArch === 'intel' ? DOWNLOADS.arm64 : null
+
+  if (!authorized) return null
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-primary-50 via-primary-100 to-primary-200">
