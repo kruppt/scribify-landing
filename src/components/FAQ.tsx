@@ -27,6 +27,10 @@ const faqs = [
   {
     question: 'Is the payment secure?',
     answer: 'Absolutely. Payments are processed by Stripe, one of the world\'s most trusted payment platforms used by companies like Amazon, Google, and Shopify. Your card details are never stored on our servers.'
+  },
+  {
+    question: 'How accurate are the AI transcriptions and summaries?',
+    answer: 'Scribify uses OpenAI\'s Whisper technology which delivers high accuracy for clear audio. However, AI-generated transcriptions and summaries may contain errors, omissions, or inaccuracies — especially with background noise, strong accents, or technical terminology. Always review and validate the output before using it for important decisions, professional work, or sharing with others.'
   }
 ]
 

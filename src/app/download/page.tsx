@@ -278,6 +278,17 @@ export default function DownloadPage() {
             </ul>
           </div>
 
+          {/* AI Disclaimer */}
+          <div className="bg-neutral-50 border border-neutral-200 rounded-2xl p-6 text-left mb-8">
+            <h3 className="font-bold text-dark-800 mb-2 flex items-center gap-2">
+              <span>&#x26A0;&#xFE0F;</span>
+              AI Disclaimer
+            </h3>
+            <p className="text-dark-600 text-sm leading-relaxed">
+              Scribify uses AI to generate transcriptions and summaries. While we strive for accuracy, AI-generated content may contain errors, omissions, or inaccuracies. Always review and validate the output before using it for important decisions, professional work, or sharing with others.
+            </p>
+          </div>
+
           {/* Which version + support */}
           <div className="text-sm text-dark-500 pb-12">
             <p>Not sure which version to download? If your Mac was made in 2020 or later, choose <strong>Apple Silicon</strong>. To check: Apple menu &gt; About This Mac &gt; look for &quot;Chip&quot; (Apple Silicon) or &quot;Processor&quot; (Intel).</p>
