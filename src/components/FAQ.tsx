@@ -29,6 +29,10 @@ const faqs = [
     answer: 'Absolutely. Payments are processed by Stripe, one of the world\'s most trusted payment platforms used by companies like Amazon, Google, and Shopify. Your card details are never stored on our servers.'
   },
   {
+    question: 'Are there any ongoing costs after the $25 purchase?',
+    answer: 'The only additional cost is your OpenAI API key, which you bring yourself. OpenAI charges pay-as-you-go based on usage — there\'s no subscription or monthly fee. Transcription with Whisper costs about $0.006 per minute, so a 1-hour recording is roughly $0.36. The good news is OpenAI continuously releases newer, more capable models that are also cheaper to use, so your costs tend to go down over time, not up.'
+  },
+  {
     question: 'How accurate are the AI transcriptions and summaries?',
     answer: 'Scribify uses OpenAI\'s Whisper technology which delivers high accuracy for clear audio. However, AI-generated transcriptions and summaries may contain errors, omissions, or inaccuracies — especially with background noise, strong accents, or technical terminology. Always review and validate the output before using it for important decisions, professional work, or sharing with others.'
   }
