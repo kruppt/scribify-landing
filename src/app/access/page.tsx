@@ -37,10 +37,15 @@ export default function DownloadPage() {
   const router = useRouter()
 
   useEffect(() => {
-    // Require a Stripe session_id in the URL — only present after a real checkout
     const params = new URLSearchParams(window.location.search)
     const sessionId = params.get('session_id')
-    if (!sessionId || !sessionId.startsWith('cs_')) {
+    const token = params.get('token')
+
+    // Allow: valid Stripe session after purchase, or tester token
+    const validPurchase = sessionId && sessionId.startsWith('cs_')
+    const validTester = token === 'scb-xk9p2m4t'
+
+    if (!validPurchase && !validTester) {
       router.replace('/')
       return
     }
